@@ -850,7 +850,22 @@ section,
   background: url("../img/hero-bg.jpg") top left;
   background-size: cover;
 }
-
+@media (max-width: 1000px) {
+  .hero {
+    min-height: 80vh;
+    background: url("../img/hero-bg.jpg") bottom center;
+    background-size: cover;
+  }
+  .about-hero:before, .hero:before {
+    content: "";
+    background: color-mix(in srgb, var(--heading-color), transparent 100%);
+    position: absolute;
+    bottom: 0;
+    top: 0;
+    left: 0;
+    right: 0;
+  }
+}
 .about-hero {
   width: 100%;
   min-height: 62vh;
@@ -858,7 +873,7 @@ section,
   padding: 60px 0;
   display: flex;
   align-items: center;
-  background: url("../img/about-hero.jpg") top left;
+  background: url("../img/about-hero.jpg") center;
   background-size: cover;
 }
 
@@ -1029,7 +1044,7 @@ section,
   font-size: 20px;
 }
 
-.featured-services .service-item h4 a {
+.featured-services .service-item h4 {
   color: var(--heading-color);
   transition: ease-in-out 0.3s;
 }
@@ -1041,7 +1056,7 @@ section,
   transition: ease-in-out 0.3s;
 }
 
-.featured-services .service-item:hover h4 a,
+.featured-services .service-item:hover h4 ,
 .featured-services .service-item:hover .icon i,
 .featured-services .service-item:hover p {
   color: var(--contrast-color);
